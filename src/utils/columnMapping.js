@@ -1,0 +1,57 @@
+import CONSTANTS from '../constants.json';
+
+export const bankColumns = [
+    { key: 'userNumber', label: CONSTANTS.LABEL.userNumber, sortable: true },
+    { key: 'userName', label: CONSTANTS.LABEL.userName, sortable: true },
+    { key: 'userReference', label: CONSTANTS.LABEL.userReference, sortable: true },
+    { key: 'settlementDate', label: CONSTANTS.LABEL.settlementDate, sortable: true },
+    { key: 'userAccountNumber', label: CONSTANTS.LABEL.userAccountNumber, sortable: true },
+    { key: 'destinationIIN', label: CONSTANTS.LABEL.destinationIIN, sortable: true },
+    { key: 'beneficiaryAadhaarNumber', label: CONSTANTS.LABEL.beneficiaryAadhaarNumber, sortable: true },
+    { key: 'userCreditReference', label: CONSTANTS.LABEL.userCreditReference, sortable: true },
+    { key: 'amount', label: CONSTANTS.LABEL.amount, sortable: true },
+];
+export const excelColumns = [
+    { key: 'uniqueBatchId', label: CONSTANTS.LABEL.uniqueBatchId, sortable: true },
+    { key: 'debitAmount', label: CONSTANTS.LABEL.debitAmount, sortable: true },
+    { key: 'paymentInstructionDate', label: CONSTANTS.LABEL.paymentInstructionDate, sortable: true },
+    { key: 'debitAccountName', label: CONSTANTS.LABEL.debitAccountName, sortable: false },
+    { key: 'sourceAccountNumber', label: CONSTANTS.LABEL.sourceAccountNumber, sortable: false },
+    { key: 'debitAccountIFSCCode', label: CONSTANTS.LABEL.debitAccountIFSCCode, sortable: false },
+    { key: 'originatingAgencyName', label: CONSTANTS.LABEL.originatingAgencyName, sortable: false },
+    { key: 'schemeName', label: CONSTANTS.LABEL.schemeName, sortable: false },
+    { key: 'subgroupId', label: CONSTANTS.LABEL.subgroupId, sortable: false },
+    { key: 'uniqueTransactionIdBeneficiary', label: CONSTANTS.LABEL.uniqueTransactionIdBeneficiary, sortable: true },
+    { key: 'paymentMode', label: CONSTANTS.LABEL.paymentMode, sortable: false },
+    { key: 'beneficiaryMobileNo', label: CONSTANTS.LABEL.beneficiaryMobileNo, sortable: false },
+    { key: 'beneficiaryCreditAmount', label: CONSTANTS.LABEL.beneficiaryCreditAmount, sortable: true },
+    { key: 'beneficiaryIFSCCode', label: CONSTANTS.LABEL.beneficiaryIFSCCode, sortable: true },
+    { key: 'beneficiaryAccountNo', label: CONSTANTS.LABEL.beneficiaryAccountNo, sortable: true },
+    { key: 'beneficiaryAccountName', label: CONSTANTS.LABEL.beneficiaryAccountName, sortable: true },
+    { key: 'aadhaarNumber', label: CONSTANTS.LABEL.aadhaarNumber, sortable: false },
+]
+
+export const departmentColumns = [
+    { key: 'uniqueBatchId', label: CONSTANTS.LABEL.uniqueBatchId, sortable: true },
+    { key: 'debitAmount', label: CONSTANTS.LABEL.debitAmount, sortable: true },
+    { key: 'paymentInstructionDate', label: CONSTANTS.LABEL.paymentInstructionDate, sortable: true },
+    { key: 'debitAccountName', label: CONSTANTS.LABEL.debitAccountName, sortable: false },
+    { key: 'sourceAccountNumber', label: CONSTANTS.LABEL.sourceAccountNumber, sortable: false },
+    { key: 'debitAccountIFSCCode', label: CONSTANTS.LABEL.debitAccountIFSCCode, sortable: false },
+    { key: 'originatingAgencyName', label: CONSTANTS.LABEL.originatingAgencyName, sortable: false },
+    { key: 'schemeName', label: CONSTANTS.LABEL.schemeName, sortable: false },
+    { key: 'subgroupId', label: CONSTANTS.LABEL.subgroupId, sortable: false },
+    { key: 'uniqueTransactionIdBeneficiary', label: CONSTANTS.LABEL.uniqueTransactionIdBeneficiary, sortable: true },
+    { key: 'paymentMode', label: CONSTANTS.LABEL.paymentMode, sortable: false },
+    { key: 'beneficiaryMobileNo', label: CONSTANTS.LABEL.beneficiaryMobileNo, sortable: false },
+    { key: 'beneficiaryCreditAmount', label: CONSTANTS.LABEL.beneficiaryCreditAmount, sortable: true },
+    { key: 'beneficiaryIFSCCode', label: CONSTANTS.LABEL.beneficiaryIFSCCode, sortable: true },
+    { key: 'beneficiaryAccountNo', label: CONSTANTS.LABEL.beneficiaryAccountNo, sortable: true },
+    { key: 'beneficiaryAccountName', label: CONSTANTS.LABEL.beneficiaryAccountName, sortable: true },
+    { key: 'aadhaarNumber', label: CONSTANTS.LABEL.aadhaarNumber, sortable: false },
+    { key: 'beneficiaryUID', label: CONSTANTS.LABEL.beneficiaryUID, sortable: false },
+    { key: 'PaymentStatus', label: CONSTANTS.LABEL.PaymentStatus, sortable: true },
+    { key: 'PaymentStatusReason', label: CONSTANTS.LABEL.PaymentStatusReason, sortable: true },
+    { key: 'createdAt', label: CONSTANTS.LABEL.createdAt, sortable: true },
+];
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Comparison</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .diff-added {
+            background-color: #dcfce7;
+            border-left: 3px solid #22c55e;
+            padding-left: 0.5rem;
+        }
+        .diff-removed {
+            background-color: #fee2e2;
+            border-left: 3px solid #ef4444;
+            padding-left: 0.5rem;
+            text-decoration: line-through;
+        }
+        .diff-unchanged {
+            background-color: #f8fafc;
+            padding-left: 0.5rem;
+        }
+        .field-label {
+            font-weight: 600;
+            color: #334155;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-6">
+    <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+        <!-- Header -->
+        <div class="bg-blue-600 text-white p-6">
+            <h1 class="text-2xl font-bold">Form Submission Comparison</h1>
+            <p class="text-blue-100">Comparing two submissions of the same form</p>
+        </div>
+
+        <!-- Submission Info -->
+        <div class="p-6 border-b">
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-semibold text-gray-700">Submission 1</h3>
+                    <p class="text-sm text-gray-500">Submitted on: <span id="sub1-date">2025-03-10T13:08:48.000Z</span></p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-700">Submission 2</h3>
+                    <p class="text-sm text-gray-500">Submitted on: <span id="sub2-date">2025-03-10T17:34:32.000Z</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Fields Comparison -->
+        <div class="divide-y divide-gray-200">
+            <!-- Personal Information Section -->
+            <div class="p-6">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2">Personal Information</h2>
+                
+                <div class="space-y-4">
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="field-label">Full Name</div>
+                        <div class="col-span-2">
+                            <div class="diff-unchanged">John Doe</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="field-label">Email</div>
+                        <div class="col-span-2">
+                            <div class="diff-unchanged">john.doe@example.com</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="field-label">Phone Number</div>
+                        <div class="col-span-2">
+                            <div class="diff-unchanged">+1 (555) 123-4567</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Document Upload Section -->
+            <div class="p-6 bg-gray-50">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2">Document Upload</h2>
+                
+                <div class="space-y-4">
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="field-label">ID Card (Front)</div>
+                        <div class="col-span-1">
+                            <div class="diff-unchanged">
+                                <a href="#" class="text-blue-600 hover:underline">id_card_front_1.jpg</a>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <div class="diff-unchanged">
+                                <a href="#" class="text-blue-600 hover:underline">id_card_front_2.jpg</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="field-label">ID Card (Back)</div>
+                        <div class="col-span-1">
+                            <div class="diff-unchanged">
+                                <a href="#" class="text-blue-600 hover:underline">id_card_back_1.jpg</a>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <div class="diff-unchanged">
+                                <a href="#" class="text-blue-600 hover:underline">id_card_back_2.jpg</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signature Section -->
+            <div class="p-6">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2">Signature</h2>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <div class="font-medium mb-2">Submission 1</div>
+                        <div class="border rounded p-4 flex justify-center items-center bg-gray-50">
+                            <img src="signature1.png" alt="Signature 1" class="max-h-24">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-medium mb-2">Submission 2</div>
+                        <div class="border rounded p-4 flex justify-center items-center bg-gray-50">
+                            <img src="signature2.png" alt="Signature 2" class="max-h-24">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Information Section -->
+            <div class="p-6 bg-gray-50">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2">Additional Information</h2>
+                
+                <div class="space-y-4">
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="field-label">Date of Birth</div>
+                        <div class="col-span-2">
+                            <div class="diff-unchanged">1985-07-15</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="field-label">Address</div>
+                        <div class="col-span-2">
+                            <div class="diff-changed">
+                                <div class="diff-removed">123 Main St, Apt 4B, Anytown, USA</div>
+                                <div class="diff-added">456 Oak Avenue, Suite 200, New York, NY 10001</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="field-label">Employment Status</div>
+                        <div class="col-span-2">
+                            <div class="diff-unchanged">Employed Full-time</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="field-label">Additional Notes</div>
+                        <div class="col-span-2">
+                            <div class="diff-changed">
+                                <div class="diff-removed">No additional notes</div>
+                                <div class="diff-added">Please contact me via email for any additional information needed.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-100 px-6 py-4 flex justify-between items-center">
+            <div class="text-sm text-gray-600">
+                <span id="total-fields">12</span> fields compared
+            </div>
+            <div class="flex space-x-2">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Export as PDF
+                </button>
+                <button class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Back to Submissions
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // You can add interactive functionality here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Count total fields for the footer
+            const totalFields = document.querySelectorAll('.grid.grid-cols-3').length;
+            document.getElementById('total-fields').textContent = totalFields;
+        });
+    </script>
+</body>
+</html>
